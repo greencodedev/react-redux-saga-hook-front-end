@@ -1,0 +1,116 @@
+// #header {
+//   color: #eae1f4;
+//   padding: 22px 15px;
+//   background: {
+//     repeat: no-repeat;
+//     position: right top;
+//     size: auto 100%;
+//   }
+//   @media (max-width: $tablet) {
+//     background-size: auto 100px;
+//   }
+//   .title {
+//     color: #c5d9d7;
+//     font-size: 30px;
+//     margin-bottom: 0;
+//   }
+//   .time {
+//     color: #5f5d5d;
+//   }
+//   .value {
+//     .aed {
+//       font-size: 12px;
+//       font-weight: 500;
+//       padding-bottom: 6px;
+//     }
+//     h2 {
+//       font-size: 52px;
+//     }
+//   }
+// }
+
+.layout-main {
+  //
+  padding-bottom: 80px;
+}
+#footer {
+  height: 80px;
+  color: #1a051d;
+  background: #fff;
+  z-index: 999;
+  padding: 12px 0;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  box-shadow: 0px 5px 5px -3px rgba(0, 0, 0, 0.2), 0px 8px 10px 1px rgba(0, 0, 0, 0.14), 0px 3px 14px 2px rgba(0, 0, 0, 0.12);
+
+  a {
+    background: transparent;
+    border: 0;
+    color: #a3aaba;
+    text-decoration: none;
+    @media (max-width: $phone) {
+      font-size: 11px;
+    }
+    &:hover,
+    &.active {
+      color: #1a051d;
+      .icon {
+        &::before {
+          display: block;
+        }
+      }
+    }
+    .icon {
+      position: relative;
+      &::before {
+        content: "";
+        width: 22px;
+        height: 22px;
+        background-color: #eb5f3b;
+        position: absolute;
+        border-radius: 100%;
+        top: 0;
+        left: 50%;
+        margin-top: 3.5px;
+        transform: translate(-50%, -50%);
+        display: none;
+      }
+      svg {
+        position: relative;
+      }
+    }
+    img {
+      height: 36px;
+      margin-bottom: 2px;
+      &.voucher {
+        transform: scale(0.8);
+      }
+      @media (max-width: $tablet) {
+        height: 30px;
+      }
+      @media (max-width: $phone) {
+        height: 26px;
+      }
+    }
+  }
+}
+
+.account-layout {
+  min-height: 100vh;
+  padding: 60px;
+  display: flex;
+  align-items: center;
+  h1 {
+    margin-bottom: 24px;
+  }
+  @media (max-width: $phone) {
+    padding: 60px 30px;
+  }
+  .btn {
+    min-width: 120px;
+  }
+}
